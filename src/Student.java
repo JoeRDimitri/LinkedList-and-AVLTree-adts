@@ -1,14 +1,25 @@
 
 public class Student {
 	
-	private long key = 0;
+	private String key = "0";
 	private String value = "";
 	
 	public Student() {
 		
 	}
+
+	public Student(Student s) {
+		this.key = s.getKey();
+		this.value = s.getValue();
+		
+	}
 	
-	public Student (int newkey, String newvalue) {
+	public Student(String keyvalue) {
+		this.key = keyvalue;
+		this.value = "johndoe";
+	}
+	
+	public Student (String newkey, String newvalue) {
 		this.key = newkey;
 		this.value = newvalue;
 	}
@@ -20,12 +31,16 @@ public class Student {
 		this.value = name;
 	}
 	
-	public long getKey() {
+	public String getKey() {
 		return this.key;
 	}
 	
-	public void setKey(long newkey) {
+	public void setKey(String newkey) {
 		this.key = newkey;
+	}
+	
+	public String toString() {
+		return this.value;
 	}
 
 	
